@@ -25,7 +25,9 @@ ofxPrinter::~ofxPrinter()
 void ofxPrinter::updatePrinterList() {
 
 	string temp = "@powershell -NoProfile -ExecutionPolicy unrestricted -Command \"./data/powershell/getPrinterList.ps1\" ";
-	system(temp.c_str());
+//    system(temp.c_str());
+    SysCommand cmd;
+    cmd.callCommand(temp.c_str());
 
 	logMessage = "update complete printer list";
 }
