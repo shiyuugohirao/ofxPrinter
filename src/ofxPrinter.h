@@ -1,5 +1,4 @@
 #pragma once
-#include "ofxImGui.h"
 #include "ofMain.h"
 
 #define IM_TEXT_SIZE 1000
@@ -22,8 +21,6 @@ class ofxPrinter
 public:
 	ofxPrinter();
 	~ofxPrinter();
-
-	void ImGui(string name);
 
 	void updatePrinterList();
 	void simplePrintOut(string imageFilePath, string printerName);
